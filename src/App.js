@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Contact from './Contact';
+import Team from './Team';
+import Home from './Home';
+
+//для меню
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 function App() {
+
+  //menu
+  //внутри нашей папки устанавливаем:
+  //npm install react-router-dom
+  //потом устанавливаем:
+  //npm i react-router
+  //берем наше меню в тег <Router>
+  //вводим тег <nav> который отвечает за отображение компонента
+  //вводим тег <Link to="/"
+  //вводим тег <Routes>
+  // -> <Route />
+  //в нем пишем саму дорогу к компоненту, используя слово element={< />}
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <nav>
+          <Link to="/" className='link' >Shop</Link>
+          <Link to="/team" className='link' >TEAM</Link>
+          <Link to="/contact" className='link' >Contact Us</Link>
+        </nav>
+        <Routes>
+          <Route path='/' element={ <Home/> } />
+          <Route path="/team" element={ <Team/> }/>
+          <Route path="/contact" element={ <Contact/> }/>
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
