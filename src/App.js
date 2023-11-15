@@ -3,6 +3,7 @@ import './App.css';
 import Contact from './Contact';
 import Team from './Team';
 import Home from './Home';
+import AboutProduct from "./AboutProduct"
 
 //для меню
 import React from 'react';
@@ -40,6 +41,7 @@ function App() {
           <Route path='/' element={ <Home/> } />
           <Route path="/team" element={ <Team/> }/>
           <Route path="/contact" element={ <Contact/> }/>
+          <Route path="/about/:title" element={ <AboutProduct />}/>
         </Routes>
       </Router>
       
