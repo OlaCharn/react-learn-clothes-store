@@ -5,7 +5,7 @@ function Clothes( {shopClothesMyProps} ){
     return(
         <div className='products'>
         {shopClothesMyProps.map(item =>{
-            const {id, name, searchTerm , price, image} = item;
+            const {id, name, price, image} = item;
             return(
                 <div className='product-card' key={id} >
                     <Link to={`/about/${item.title}`}>
