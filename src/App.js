@@ -28,7 +28,6 @@ function App() {
   // -> <Route />
   //в нем пишем саму дорогу к компоненту, используя слово element={< />}
 
-
   return (
     <div>
       <Router>
@@ -43,10 +42,8 @@ function App() {
           <Route path="/contact" element={ <Contact/> }/>
           <Route path="/about/:title" element={ <AboutProduct />}/>
         </Routes>
-      </Router>
-      
+      </Router>    
     </div>
   );
 }
-
 export default App;
